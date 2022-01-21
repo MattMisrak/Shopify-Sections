@@ -1,0 +1,196 @@
+<div class="Section--Commitment-bar">
+  <h2 class="SectionHeader__SubHeading SectionHeader--center Heading u-h6"> {{ section.settings.section_title }} </h2>
+  <div class="Grid Grid--center"> 
+    <div class="Grid__Cell Grid--left 1/2--tablet 1/4--lap-and-up">
+      <div>
+        {% if section.settings.link_1 != blank %}
+        	<a href="{{ section.settings.link_1 }}">
+        {% endif %}
+                                  
+        	{% if section.settings.logo_1 != blank %}
+              <div class="Commitment__Logo--container">
+         		{{ section.settings.logo_1 | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'Commitment__Logo' }}
+              </div>
+         	{% endif %}
+              
+            {% if section.settings.title_1 != blank %}
+              <h3 class="ProductMeta__Title Heading u-h2 Commitment__Title">{{ section.settings.title_1 }}</h3>
+         	{% endif %}
+              
+            {% if section.settings.text_1 != blank %}
+              <p class="Rte Commitment__Text">{{ section.settings.text_1 }}</p>
+         	{% endif %}
+              
+         {% if section.settings.link_1 != blank %}   				
+            </a>  
+         {% endif %}
+      </div>  
+    </div>
+      <div class="Grid__Cell Grid--center 1/2--tablet 1/4--lap-and-up">
+      <div>
+        {% if section.settings.link_2 != blank %}
+        	<a href="{{ section.settings.link_2 }}">
+        {% endif %}
+                                  
+        	{% if section.settings.logo_2 != blank %}
+              <div class="Commitment__Logo--container">
+         		{{ section.settings.logo_2 | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'Commitment__Logo' }}
+              </div>  
+         	{% endif %}
+              
+            {% if section.settings.title_2 != blank %}
+              <h3 class="ProductMeta__Title Heading u-h2 Commitment__Title">{{ section.settings.title_2 }}</h3>
+         	{% endif %}
+              
+            {% if section.settings.text_2 != blank %}
+              <p class="Rte Commitment__Text">{{ section.settings.text_2 }}</p>
+         	{% endif %}
+              
+         {% if section.settings.link_2 != blank %}   				
+            </a>  
+         {% endif %}
+      </div>  
+    </div>
+    <div class="Grid__Cell Grid--right 1/2--tablet 1/4--lap-and-up">
+      <div>
+        {% if section.settings.link_3 != blank %}
+        	<a href="{{ section.settings.link_3 }}">
+        {% endif %}
+                                  
+        	{% if section.settings.logo_3 != blank %}
+              <div class="Commitment__Logo--container">
+         		{{ section.settings.logo_3 | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'Commitment__Logo' }}
+              </div>
+         	{% endif %}
+              
+            {% if section.settings.title_3 != blank %}
+              <h3 class="ProductMeta__Title Heading u-h2 Commitment__Title">{{ section.settings.title_3 }}</h3>
+         	{% endif %}
+              
+            {% if section.settings.text_3 != blank %}
+              <p class="Rte Commitment__Text">{{ section.settings.text_3 }}</p>
+         	{% endif %}
+              
+         {% if section.settings.link_3 != blank %}   				
+            </a>  
+         {% endif %}
+      </div>  
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Commitment Bar",
+    "settings": [
+ 	  {
+        "id": "section_title",
+        "type": "text",
+        "label": "Section Title",
+        "default": "Title"
+      },
+ 	  {
+        "id": "logo_1",
+        "type": "image_picker",
+        "label": "Logo (left)"
+      },
+ 	  {
+        "id": "title_1",
+        "type": "text",
+        "label": "Title",
+        "default": "Title"
+      },
+ 	  {
+        "id": "text_1",
+        "type": "text",
+        "label": "Text",
+        "default": "Text"
+      },
+  	  {
+        "id": "link_1",
+        "type": "url",
+        "label": "Link",
+        "info": "Optional"
+      },
+ 	  {
+        "id": "logo_2",
+        "type": "image_picker",
+        "label": "Logo (middle)"
+      },
+ 	  {
+        "id": "title_2",
+        "type": "text",
+        "label": "Title",
+        "default": "Title"
+      },
+ 	  {
+        "id": "text_2",
+        "type": "text",
+        "label": "Text",
+        "default": "Text"
+      },
+      {
+        "id": "link_2",
+        "type": "url",
+        "label": "Link",
+        "info": "Optional"
+      },
+ 	  {
+        "id": "logo_3",
+        "type": "image_picker",
+        "label": "Logo (right)"
+      },
+ 	  {
+        "id": "title_3",
+        "type": "text",
+        "label": "Title below logo",
+        "default": "Title"
+      },
+ 	  {
+        "id": "text_3",
+        "type": "text",
+        "label": "Text",
+        "default": "Text"
+      },
+      {
+        "id": "link_3",
+        "type": "url",
+        "label": "Link",
+        "info": "Optional"
+      }
+],
+    "presets": [
+      {
+        "name": "Commitment bar",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.Commitment__Logo{
+	object-fit: contain;
+	margin: 10px;
+	max-height: 160px;
+}
+
+.Commitment__Logo--container{
+	text-align: center;
+
+}
+.Commitment__Title{
+    text-align: center;
+	min-height: 60px;
+
+}
+
+.Commitment__Text{
+    text-align: center;
+	margin-top: 10px !important;
+
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
